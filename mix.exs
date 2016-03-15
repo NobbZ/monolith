@@ -27,6 +27,6 @@ defmodule Monolith.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:anubis, "~> 0.3.0"}]
+    [{:ra, "~> 0.3.1"}]
   end
 end
