@@ -3,7 +3,7 @@ defmodule Mix.Tasks.Monolith do
   use Ra
 
   banner """
-  This is an example task.
+  This is the monolith static site generator.
 
   Use it like:
       $ mix monolith <command> <args>
