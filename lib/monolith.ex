@@ -1,0 +1,2 @@
+defmodule Monolith do
+end
