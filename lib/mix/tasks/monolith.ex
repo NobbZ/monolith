@@ -1,19 +1,12 @@
 defmodule Mix.Tasks.Monolith do
   use Mix.Task
-  use Ra
 
-  banner """
-  This is the monolith static site generator.
+  @moduledoc """
+  Please use one of the following sub-tasks:
 
-  Use it like:
-      $ mix monolith <command> <args>
+  * `monolith.init`: Initializes a project
   """
 
-  command :init, "Initialize the site", Monolith.Tasks.init
-  command :compile, "Compiles the site", Monolith.Tasks.compile
-  command :server, "Starts a server which delivers the site", Monolith.Tasks.server
-  command :watch, "Recompiles as files change and keeps a server running", Monolith.Tasks.watch
-  command :deploy, "Compiles and deploys the site as configured", Monolith.Tasks.deploy
-
-  parse
+  @doc false
+  def run(_args), do: Mix.Task.run("help", ["monolith"])
 end
