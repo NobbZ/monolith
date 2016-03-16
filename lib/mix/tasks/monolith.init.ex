@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Monolith.Init do
 
   @doc false
   def run(args)
-  def run([]), do: Monolith.init_project
+  def run([]), do: Monolith.Project.init
   def run(_) do
     IO.puts "No arguments accepted."
     System.halt(1)
