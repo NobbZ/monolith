@@ -1,14 +1,13 @@
 defmodule Monolith.ProjectTest do
   use ExUnit.Case, async: false
 
-  setup do
-    on_exit fn -> TestHelper.cleanup end
-  end
+  import Mock
 
-  test "Directory structure is created" do
+  test_with_mock "Directory structure is created", File,
+    [mkdir_p: fn(_path) -> :ok end] do
     Monolith.Project.init()
 
     folders = Enum.map(["posts", "drafts", "pages", "templates"], &("./priv/#{&1}"))
-    for folder <- folders, do: assert File.dir?(folder)
-  end 
+    for folder <- folders, do: assert called File.mkdir_p(folder)
+  end
 end
