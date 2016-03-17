@@ -16,5 +16,6 @@ defmodule Monolith.Project do
         :ok -> :ok
       end
     end
+    |> Enum.all?(&(&1 == :ok))
   end
 end
