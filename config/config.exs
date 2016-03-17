@@ -18,7 +18,10 @@ use Mix.Config
 #
 # Or configure a 3rd-party app:
 #
-#     config :logger, level: :info
+config :logger,
+  backends: [:console],
+  level: :info,
+  compile_time_purge_level: :info
 
 config :todo,
   print: :overdue,
