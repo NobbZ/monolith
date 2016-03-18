@@ -14,6 +14,7 @@ defmodule Monolith.Project do
   """
   @spec init() :: boolean()
   def init() do
+    IO.puts Mix.Project.get()
     create_folders()
     create_templates()
   end
