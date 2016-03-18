@@ -1,4 +1,6 @@
 defmodule Monolith.Project do
+  require EEx
+
   @moduledoc """
   This module does contain functions which are needed to handle Monolith
   projects.
@@ -13,6 +15,7 @@ defmodule Monolith.Project do
   @spec init() :: boolean()
   def init() do
     create_folders()
+    create_templates()
   end
 
   defp create_folders() do
@@ -21,4 +24,10 @@ defmodule Monolith.Project do
     |> Enum.map(&Mix.Generator.create_directory/1)
     |> Enum.all?(&(&1 == :ok))
   end
+
+  defp create_templates() do
+    Mix.Generator.create_file("./priv/templates/post.md.eex", post_md_eex)
+  end
+
+  EEx.function_from_file(:defp, :post_md_eex, "./priv/templates/templates/post.md.eex")
 end

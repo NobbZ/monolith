@@ -1,0 +1,6 @@
+---
+title: <%%= @title %>
+author: <%%= @author %>
+---
+
+This is an example-template for your posts.
