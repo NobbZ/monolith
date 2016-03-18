@@ -35,7 +35,6 @@ defmodule Monolith.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [{:earmark, "~> 0.2.1"},
-     {:todo,   "~> 1.1.0"},
 
      {:ex_doc, "~> 0.11.4", only: :dev},
      {:dialyxir, "~> 0.3.3", only: :dev},
