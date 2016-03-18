@@ -13,7 +13,8 @@ defmodule Monolith.Mixfile do
 
   def aliases do
     [c: ["deps.get", "deps.compile", "compile", "docs"],
-     r: ["clean", "c"]]
+     r: ["clean", "c"],
+     lint: ["dialyzer"]]
   end
 
   # Configuration for the OTP application
@@ -37,6 +38,7 @@ defmodule Monolith.Mixfile do
      {:todo,   "~> 1.1.0"},
 
      {:ex_doc, "~> 0.11.4", only: :dev},
+     {:dialyxir, "~> 0.3.3", only: :dev},
 
      {:mock, "~> 0.1.3", only: :test}]
   end
