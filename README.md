@@ -1,7 +1,7 @@
 # Monolith
 
-`monolith` is going to get a static website generator which is aimed to fullfil
-the following:
+`monolith` is going to become a static website generator which is aimed to
+fullfil the following:
 
 * Easy to extend via plugins
 * Easy to configure
@@ -9,8 +9,8 @@ the following:
 
 ## Installation
 
-`monolith` is currently not available on hackage, therefore you have to install
-it as follows:
+`monolith` is currently not available on [hex.pm][hex], therefore you have to
+install it as follows:
 
 1. Add monolith to your list of dependencies in `mix.exs`:
 
@@ -33,3 +33,5 @@ end
 ## Projects using `monolith`
 
 None I'm aware of so far.
+
+[hex]: https://hex.pm/
