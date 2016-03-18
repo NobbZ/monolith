@@ -1,3 +1,7 @@
 defmodule Monolith do
-  @moduledoc File.read!("./README.md") |> String.split("\n") |> Enum.drop(2) |> Enum.join("\n")
+  @moduledoc "./README.md"
+              |> File.read!
+              |> String.split("\n")
+              |> Enum.drop(2)
+              |> Enum.join("\n")
 end
