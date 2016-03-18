@@ -1,6 +1,7 @@
 defmodule Monolith.Project do
   require Logger
 
+  @spec init() :: boolean()
   def init() do
     create_folders()
   end
