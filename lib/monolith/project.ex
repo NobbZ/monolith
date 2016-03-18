@@ -1,6 +1,9 @@
 defmodule Monolith.Project do
   require EEx
 
+  @folder_names ["posts", "drafts", "pages", "templates"]
+  @folders Enum.map(@folder_names, &("./priv/#{&1}"))
+
   @moduledoc """
   This module does contain functions which are needed to handle Monolith
   projects.
@@ -14,16 +17,20 @@ defmodule Monolith.Project do
   """
   @spec init() :: boolean()
   def init() do
-    IO.puts Mix.Project.get()
     create_folders()
+    create_gitkeep()
     create_templates()
   end
 
   defp create_folders() do
-    ["posts", "drafts", "pages", "templates"]
-    |> Enum.map(&("./priv/#{&1}"))
+    @folder_names
     |> Enum.map(&Mix.Generator.create_directory/1)
     |> Enum.all?(&(&1 == :ok))
+  end
+
+  defp create_gitkeep() do
+    @folder_names
+    |> Enum.map(&Mix.Generator.create_file("#{&1}/.gitkeep", ""))
   end
 
   defp create_templates() do
