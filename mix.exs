@@ -14,7 +14,7 @@ defmodule Monolith.Mixfile do
   def aliases do
     [c: ["deps.get", "deps.compile", "compile", "docs"],
      r: ["clean", "c"],
-     lint: ["dialyzer", "inch --pedantic", "credo list"]]
+     lint: ["dialyzer", "inch", "credo list"]]
   end
 
   # Configuration for the OTP application
