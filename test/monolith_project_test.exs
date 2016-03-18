@@ -3,6 +3,12 @@ defmodule Monolith.ProjectTest do
 
   import Mock
 
+  setup do
+    old_mix_shell = Mix.shell
+    Mix.shell(Mix.Shell.Quiet)
+    on_exit(fn() -> Mix.shell(old_mix_shell) end)
+  end
+
   test_with_mock "Directory structure is created", File,
     [mkdir_p!: fn(_path) -> :ok end] do
     assert true == Monolith.Project.init()
