@@ -1,5 +1,4 @@
 defmodule Monolith.Project do
-  require Logger
 
   @spec init() :: boolean()
   def init() do
