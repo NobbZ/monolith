@@ -2,6 +2,7 @@
 /cover
 /deps
 /doc
+/docs
 mix.lock
 erl_crash.dump
 *.ez
