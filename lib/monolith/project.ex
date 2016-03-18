@@ -7,16 +7,9 @@ defmodule Monolith.Project do
   end
 
   defp create_folders() do
-    folders = Enum.map(["posts", "drafts", "pages", "templates"], &("./priv/#{&1}"))
-    for folder <- folders do
-      Logger.info "Creating `#{folder}`"
-      case File.mkdir_p(folder) do
-        {:error, reason} ->
-          Logger.error "Could not create #{folder}: #{reason}"
-          {:error, reason}
-        :ok -> :ok
-      end
-    end
+    ["posts", "drafts", "pages", "templates"]
+    |> Enum.map(&("./priv/#{&1}"))
+    |> Enum.map(&File.mkdir_p/1)
     |> Enum.all?(&(&1 == :ok))
   end
 end
