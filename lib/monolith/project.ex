@@ -18,7 +18,7 @@ defmodule Monolith.Project do
   defp create_folders() do
     ["posts", "drafts", "pages", "templates"]
     |> Enum.map(&("./priv/#{&1}"))
-    |> Enum.map(&File.mkdir_p/1)
+    |> Enum.map(&Mix.Generator.create_directory/1)
     |> Enum.all?(&(&1 == :ok))
   end
 end
