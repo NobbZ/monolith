@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Monolith by NobbZ</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Monolith</h1>
+        <h2>A static site generator written in elixir</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/NobbZ/monolith/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/NobbZ/monolith/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/NobbZ/monolith" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="monolith" class="anchor" href="#monolith" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Monolith</h1>
+
+<p><code>monolith</code> is going to become a static website generator which is aimed to
+fullfil the following:</p>
+
+<ul>
+<li>Easy to extend via plugins</li>
+<li>Easy to configure</li>
+<li>It does know how to deploy (at least to most important targets)</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p><code>monolith</code> is currently not available on <a href="https://hex.pm/">hex.pm</a>, therefore you have to
+install it as follows:</p>
+
+<ol>
+<li>Add monolith to your list of dependencies in <code>mix.exs</code>:</li>
+</ol>
+
+<div class="highlight highlight-source-elixir"><pre><span class="pl-k">def</span> <span class="pl-en">deps</span> <span class="pl-k">do</span>
+  [{<span class="pl-c1">:monolith</span>, <span class="pl-c1">github:</span> <span class="pl-s"><span class="pl-pds">"</span>NobbZ/monolith<span class="pl-pds">"</span></span>, <span class="pl-c1">branch:</span> <span class="pl-s"><span class="pl-pds">"</span>master<span class="pl-pds">"</span></span>}]
+<span class="pl-k">end</span></pre></div>
+
+<ol>
+<li>Ensure monolith is started before your application:</li>
+</ol>
+
+<div class="highlight highlight-source-elixir"><pre><span class="pl-k">def</span> <span class="pl-en">application</span> <span class="pl-k">do</span>
+  [<span class="pl-c1">applications:</span> [<span class="pl-c1">:monolith</span>]]
+<span class="pl-k">end</span></pre></div>
+
+<ol>
+<li>Pull and compile the newly added dependencies: <code>mix do deps.get, deps.compile</code>
+</li>
+</ol>
+
+<h2>
+<a id="projects-using-monolith" class="anchor" href="#projects-using-monolith" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Projects using <code>monolith</code>
+</h2>
+
+<p>None I'm aware of so far.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>

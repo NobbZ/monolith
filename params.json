@@ -1,0 +1,6 @@
+{
+  "name": "Monolith",
+  "tagline": "A static site generator written in elixir",
+  "body": "# Monolith\r\n\r\n`monolith` is going to become a static website generator which is aimed to\r\nfullfil the following:\r\n\r\n* Easy to extend via plugins\r\n* Easy to configure\r\n* It does know how to deploy (at least to most important targets)\r\n\r\n## Installation\r\n\r\n`monolith` is currently not available on [hex.pm][hex], therefore you have to\r\ninstall it as follows:\r\n\r\n1. Add monolith to your list of dependencies in `mix.exs`:\r\n\r\n```ex\r\ndef deps do\r\n  [{:monolith, github: \"NobbZ/monolith\", branch: \"master\"}]\r\nend\r\n```\r\n\r\n2. Ensure monolith is started before your application:\r\n\r\n```ex\r\ndef application do\r\n  [applications: [:monolith]]\r\nend\r\n```\r\n\r\n3. Pull and compile the newly added dependencies: `mix do deps.get, deps.compile`\r\n\r\n## Projects using `monolith`\r\n\r\nNone I'm aware of so far.\r\n\r\n[hex]: https://hex.pm/\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
